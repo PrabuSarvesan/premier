@@ -1,0 +1,26 @@
+<section class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-md-6 login-sec">
+        <h2 class="text-center">Login</h2>
+        <form class="login-form">
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="userName" name="userName" placeholder="User Name">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password">
+            <span *ngIf="invalid" class='error'>Please enter valid user and password</span>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              <small>Remember Me</small>
+            </label>
+            <button type="submit" class="btn btn-login float-right" (click)="loginClick()">login <i class="fa fa-sign-in"></i></button>
+            <a [routerLink]="['/register']" class="register-btn">Register User</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

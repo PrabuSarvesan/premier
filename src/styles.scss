@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:regular,i,di,b);
+
+body{
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+}
+
+.h2Color{color:#484848}
+
+.brandTxtCol{color: #008996}
+.font-header{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.sub-header{
+    color:#999;
+    font-size: 0.8rem
+}
+.mx-2-half{
+    margin-right: .75rem!important;
+    margin-left: .75rem!important;
+}
+.pac-container {
+    z-index: 1080 !important;
+}
+.logo-name {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    padding-top: 85px;
+    padding-left: 45px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ed5565;
+  }
+  .logo-name span {
+    font-family: initial;
+    font-style: italic;
+  }
+  .load-btn, .add-btn {
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;    
+    transition: all 0.5s;
+    cursor: pointer;  
+    margin: 5px;  
+  }
+  .load-btn {
+    background-color: #d95245;
+    padding: 10px;
+    width: 200px;
+  }
+  .add-btn {
+    background-color: #2dbaaa;
+    padding: 5px;
+    width: 180px;
+    padding-left: 25px;
+  }
+  
+  .load-btn span, .add-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .color-red{
+    color: #d95245;
+  }
+  
+  .load-btn span:after, .add-btn span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .load-btn span:after {
+    content: '\00bb';
+  }
+  .add-btn:hover span:before {
+    content: '\f217';
+    font-family: FontAwesome;
+    padding-left: 10px;
+  }
+  .add-btn.checkout-btn:hover span:before {
+    content: '\f291';
+    font-family: FontAwesome;
+    padding-left: 10px;
+  }
+  
+  .load-btn:hover span, .add-btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .load-btn:hover span:after, .add-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  @keyframes lds-rolling {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes lds-rolling {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .lds-rolling div,
+  .lds-rolling div:after {
+    position: absolute;
+    width: 194px;
+    height: 194px;
+    border: 14px solid #ed5565;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
+
+  .lds-rolling div {
+    -webkit-animation: lds-rolling 1.5s linear infinite;
+    animation: lds-rolling 1.5s linear infinite;
+    top: 100px;
+    left: 100px;
+  }
+
+  .lds-rolling div:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .lds-rolling {
+    width: 200px !important;
+    height: 200px !important;
+    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+  } * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}

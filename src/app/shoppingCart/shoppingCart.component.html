@@ -1,0 +1,94 @@
+<section class="cart-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 shopping-cart">
+        <!-- Title -->
+        <div class="title">
+          Shopping Bag
+          <span *ngIf="products.length>0;" class="float-right">
+            <a href="" (click)="clearCart()" class="clear-btn">Clear Cart
+            </a>
+            <button type="button" [routerLink]="['/home']" class="add-btn">Continue Shopping
+              <span></span>
+            </button>
+          </span>
+        </div>
+        <div *ngIf="products.length==0; else cartList" class="col-12 text-center mt-5">
+          <h2 class="brandTxtCol">
+            <b>OOPS..!</b>
+          </h2>
+          <div class="my-3">
+            <i>We know that you want to checkout quickly but you forget somethinng very important...</i>
+          </div>
+          <h5 class="color-red mb-4">
+            <b>Your Shopping Cart is empty</b>
+          </h5>
+          <button type="button" [routerLink]="['/home']" class="add-btn">Continue Shopping
+            <span></span>
+          </button>
+        </div>
+        <ng-template #cartList>
+          <div *ngFor="let item of products" class="item row p-3">
+            <div class="col-3 image vertical-align-midle">
+              <img src="../assets/adv-images/{{item.img_url}}" class="cart-img" alt="" />
+            </div>
+
+            <div class="col-3 description vertical-align-midle">
+              <span>{{item.banner_text}}</span>
+            </div>
+            <div class="col-3 quantity cart-add-btn vertical-align-midle justify-content-center">
+              <span class="fa fa-minus-circle fa-40" style=" vertical-align: middle;" (click)="selectQuantity(item,'decreement')" aria-hidden="true"></span>
+              <span class="px-2 quantity-color">{{item.totalQuantity}} /
+                <sub>{{item.type}}</sub>
+              </span>
+              <span class="fa fa-plus-circle fa-40" style=" vertical-align: middle;" (click)="selectQuantity(item, 'increement')" aria-hidden="true"></span>
+            </div>
+            <div class="col-2 total-price vertical-align-midle justify-content-end">
+              <i class="fa fa-inr pr-1" aria-hidden="true"></i>{{((item.original_price-(item.original_price*item.offer_percent/100))*item.totalQuantity).toFixed(2)}}</div>
+              <div class="col-1 delete-btn vertical-align-midle justify-content-center">
+                <span class="fa fa-times fa-30" (click)="romoveCartItem(item)" style=" vertical-align: middle;" aria-hidden="true"></span>
+                <!-- <span class="fa fa-heart fa-30 ml-3" aria-hidden="true" style=" vertical-align: middle;"></span> -->
+              </div>
+            </div>
+            <div class="row total-cart p-3">
+              <div class="col-3">
+              </div>
+              <div class="col-3">
+              </div>
+              <div class="col-3 total-content">
+                <div>Shopping & Handling</div>
+                <div>Product Total</div>
+              </div>
+              <div class="col-3 text-right total-content">
+                <div>{{this.cartService.deliveryType}}</div>
+                <div>
+                  <i class="fa fa-inr pr-1" aria-hidden="true"></i>{{total}}</div>
+                </div>
+              </div>
+              <div class="row px-3 pb-5">
+                <div class="col-3">
+                </div>
+                <div class="col-3">
+                </div>
+                <div class="col-3 sub-total-content">
+                  <div>
+                    <b>Subtotal</b>
+                  </div>
+                </div>
+                <div class="col-3 text-right sub-total-content">
+                  <div>
+                    <b>
+                      <i class="fa fa-inr pr-1" aria-hidden="true"></i>{{subTotal}}</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-3 pb-3 justify-content-end">
+                  <button type="button" [routerLink]="['/checkOut']" class="add-btn checkout-btn">Proceed to checkout
+                    <span></span>
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </section>

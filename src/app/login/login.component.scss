@@ -1,0 +1,12 @@
+.login-block{background: #dadada;width:100%;padding-top: 60px;height: 500px;}
+.form-control{border-radius: 10px;}
+.container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(250, 152, 141, 0.4);}
+.login-sec{padding: 50px 10px; position:relative;margin: 0 auto}
+.login-sec .copy-text{position:absolute; width:80%; bottom:20px; font-size:13px; text-align:center;}
+.login-sec .copy-text i{color:#ed7c71;}
+.login-sec .copy-text a{color:#333333;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #da5245;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#ed7c71; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #da5245; color:#fff; font-weight:600; width:150px; cursor: pointer;}
+.error{color:#e36559;margin-left: 10px;}
+.register-btn{font-size:15px;margin-right:15px;color:#da5245;text-decoration:none;text-decoration-line:underline;float:right;margin-top:16px;}

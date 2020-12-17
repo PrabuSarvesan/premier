@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.shopping-cart {
+  width: 750px;
+  min-height: 423px;
+  margin: 20px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.shopping-cart .fa-30{
+  font-size: 1.3rem;
+}
+.shopping-cart .fa-40{
+  font-size: 1.7rem;
+}
+.title {
+  border-bottom: 1px solid #E1E8EE;
+  padding-left: 25px;
+  padding-top: 20px;
+  color: #5E6977;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 170px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+.total-cart{
+  border-top:  2px solid #E1E8EE;
+}
+.cart-add-btn .fa{
+  color: #2dbaaa;
+  cursor: pointer;
+}
+.quantity-color{
+  color: #666;
+  vertical-align: middle;
+}
+.delete-btn span{
+  color: #928f8f;
+  cursor: pointer;
+}
+.vertical-align-midle{
+  display: inherit;
+  align-items: center;
+}
+.cart-img{
+  width: 200px;
+  height: 120px;
+}
+.cart-block .add-btn{
+  width: 260px;
+}
+.total-content{
+  border-bottom: 2px solid #E1E8EE;
+  line-height: 2;
+  font-size: 14px;
+  font-weight: 600;
+}
+.sub-total-content{
+  font-size: 14px;
+  font-weight: 600;
+}
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+.description {
+  width: 250px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+}
+.total-price {
+  width: 83px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+.clear-btn{
+  font-size: 16px;
+  margin-right: 25px;
+  color: #2dbaaa;
+  text-decoration: none;
+  text-decoration-line: underline;
+}
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+}
+.cart-block{background: #dadada;width:100%;}

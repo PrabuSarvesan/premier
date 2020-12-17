@@ -1,0 +1,56 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+footer .bgCol{
+  background: #333;
+  color:#fff
+}
+footer .copyRightBg{
+  background: #272727;
+}
+footer .grayCol{
+  color:#e6dddd
+}
+footer p{
+  color: #FFF;
+  font-weight: bold;
+  border-bottom: 1px solid #c7c7c7;
+  padding:10px 0px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+footer a{
+  cursor: pointer;
+}
+footer ul{
+  list-style: none;
+  color: #e6dddd;
+  padding: 0
+}
+.footer-menu{
+  font-size: 15px;
+  line-height: 30px;
+}
+.footer-menu a{
+  color:#FFF;
+  letter-spacing: 3px;
+  text-decoration:none;
+  font-size:14px;
+  position: relative;
+}
+.footer-menu li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #FFF;
+  transition: 0.4s;
+  height: 2px;
+  bottom: -5px;
+}
+.footer-menu li a:hover:after {
+  width: 100px;
+}
