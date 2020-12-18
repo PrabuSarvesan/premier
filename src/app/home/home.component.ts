@@ -18,23 +18,25 @@ export class homeComponent implements OnInit {
   constructor(private router: Router, private http: Http, public cartService: cartService, private activatedRoute: ActivatedRoute) {
   }
   ngOnInit(): void {
-    this.http.get('http://localhost:3004/add_list')
-      .subscribe((data) => {
-        this.data = data.json();
+    this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+      .subscribe((data) => {      
+        this.data = data.json().add_list;
       });
     this.router.events.filter(event => event instanceof NavigationEnd)
       .subscribe(event => {
         this.params = (new URL(<any>document.location))['searchParams'].get("category");
-        this.http.get('http://localhost:3004/add_list')
-          .subscribe((data) => {
-            this.data = this.params ? data.json().filter(obj => obj.category == this.params) : data.json();
+        this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+          .subscribe((jsonData) => {
+            let data = (jsonData as any).json().add_list;
+            this.data = this.params ? data.filter(obj => obj.category == this.params) : data;
           });
       });
     this.activatedRoute.params.subscribe(() => {
       this.params = (new URL(<any>document.location))['searchParams'].get("category");
-      this.http.get('http://localhost:3004/add_list')
-        .subscribe((data) => {
-          this.data = this.params ? data.json().filter(obj => obj.category == this.params) : data.json();
+      this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+        .subscribe((jsonData) => {
+          let data = (jsonData as any).json().add_list;
+          this.data = this.params ? data.filter(obj => obj.category == this.params) : data;
         });
     });
   }
