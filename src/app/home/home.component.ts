@@ -13,9 +13,9 @@ import { cartService } from 'app/services/sharedService';
 export class homeComponent implements OnInit {
   public data: Array<Object> = [];
   public selectedItem: any = {};
-  private modelImage: any = null;
+  public modelImage: any = null;
   public params: string = '';
-  constructor(private router: Router, private http: Http, private cartService: cartService, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private http: Http, public cartService: cartService, private activatedRoute: ActivatedRoute) {
   }
   ngOnInit(): void {
     this.http.get('http://localhost:3004/add_list')

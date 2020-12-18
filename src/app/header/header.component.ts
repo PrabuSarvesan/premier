@@ -20,7 +20,7 @@ export class headerComponent implements OnInit {
 	// public map: google.maps.Map;
 	public selectedCity: string = 'Chennai';
 	public searchedOffer = 'Search Here';
-	constructor(private router: Router, public cartData: cartService, private loginService: LoginService) {
+	constructor(private router: Router, public cartData: cartService, public loginService: LoginService) {
 		// navigator.geolocation.getCurrentPosition((position) => {
 		// 	this.selectedCity = 'Location';
 		// }, () => {

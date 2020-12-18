@@ -21,7 +21,7 @@ import {
 })
 export class ShoppingCartComponent implements OnInit, OnDestroy {
   public itemCount: number;
-  private products: any;
+  public products: any;
   private deliveryType: string;
   private cartSubscription: Subscription;
   private total = this.cartService.getTotal();
