@@ -917,7 +917,7 @@ var homeComponent = (function () {
             item.totalQuantity = parseFloat(item.quantity).toFixed(2);
             this.selectedItem = item;
         }
-        this.modelImage = '../assets/adv-images/' + this.selectedItem.img_url;
+        this.modelImage = '/premier/assets/adv-images/' + this.selectedItem.img_url;
     };
     homeComponent.prototype.addClick = function (event, item) {
         this.cartService.UpdateProduct(item);
