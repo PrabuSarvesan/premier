@@ -872,21 +872,21 @@ var homeComponent = (function () {
     }
     homeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:3004/add_list')
+        this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
             .subscribe(function (data) {
             _this.data = data.json();
         });
         this.router.events.filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationEnd */]; })
             .subscribe(function (event) {
             _this.params = (new URL(document.location))['searchParams'].get("category");
-            _this.http.get('http://localhost:3004/add_list')
+            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
                 .subscribe(function (data) {
                 _this.data = _this.params ? data.json().filter(function (obj) { return obj.category == _this.params; }) : data.json();
             });
         });
         this.activatedRoute.params.subscribe(function () {
             _this.params = (new URL(document.location))['searchParams'].get("category");
-            _this.http.get('http://localhost:3004/add_list')
+            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
                 .subscribe(function (data) {
                 _this.data = _this.params ? data.json().filter(function (obj) { return obj.category == _this.params; }) : data.json();
             });
