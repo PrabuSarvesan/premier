@@ -872,22 +872,25 @@ var homeComponent = (function () {
     }
     homeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
-            .subscribe(function (data) {
+        this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+            .subscribe(function (jsonData) {
+            var data = jsonData.add_list;
             _this.data = data.json();
         });
         this.router.events.filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationEnd */]; })
             .subscribe(function (event) {
             _this.params = (new URL(document.location))['searchParams'].get("category");
-            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
-                .subscribe(function (data) {
+            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+                .subscribe(function (jsonData) {
+                var data = jsonData.add_list;
                 _this.data = _this.params ? data.json().filter(function (obj) { return obj.category == _this.params; }) : data.json();
             });
         });
         this.activatedRoute.params.subscribe(function () {
             _this.params = (new URL(document.location))['searchParams'].get("category");
-            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json/add_list')
-                .subscribe(function (data) {
+            _this.http.get('https://prabusarvesan.github.io/premier/assets/db.json')
+                .subscribe(function (jsonData) {
+                var data = jsonData.add_list;
                 _this.data = _this.params ? data.json().filter(function (obj) { return obj.category == _this.params; }) : data.json();
             });
         });
